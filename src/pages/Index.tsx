@@ -10,14 +10,14 @@ const Index = () => {
       <section className="hero-section relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center animate-fade-in">
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 animate-float">
               TechLinux Solutions
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Soluciones integrales en sistemas Linux, bases de datos, redes y programación para impulsar su negocio hacia el futuro.
             </p>
             <div className="mt-8">
-              <Button className="bg-blue-600 hover:bg-blue-700 transform transition-transform hover:scale-105">
+              <Button className="bg-blue-600 hover:bg-blue-700 transform transition-transform hover:scale-105 button-glow">
                 Contactar
               </Button>
             </div>
@@ -26,7 +26,7 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/80 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Nuestros Servicios
@@ -67,7 +67,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50/90 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -90,10 +90,10 @@ const Index = () => {
           <h3 className="text-2xl font-bold text-white mb-4">TechLinux Solutions</h3>
           <p className="mb-4">Transformando empresas a través de la tecnología</p>
           <div className="flex justify-center space-x-4">
-            <Button variant="outline" className="text-white border-white hover:bg-gray-800 transition-colors">
+            <Button variant="outline" className="text-white border-white hover:bg-gray-800 transition-colors button-glow">
               Contacto
             </Button>
-            <Button variant="outline" className="text-white border-white hover:bg-gray-800 transition-colors">
+            <Button variant="outline" className="text-white border-white hover:bg-gray-800 transition-colors button-glow">
               Servicios
             </Button>
           </div>
