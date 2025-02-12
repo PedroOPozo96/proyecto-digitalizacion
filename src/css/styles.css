@@ -1,0 +1,70 @@
+
+/* Variables globales */
+:root {
+  --primary-color: #3b82f6;
+  --secondary-color: #1e40af;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --background-gradient-from: #f9fafb;
+  --background-gradient-to: #f3f4f6;
+}
+
+/* Estilos globales */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Estilos de secciones */
+.hero-section {
+  background: linear-gradient(
+    135deg,
+    var(--background-gradient-from),
+    var(--background-gradient-to)
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('/background-pattern.svg');
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.service-card {
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+  color: var(--primary-color);
+}
+
+/* Estilos del footer */
+.footer-gradient {
+  background: linear-gradient(to bottom, #1a1a1a, #2d3748);
+}
