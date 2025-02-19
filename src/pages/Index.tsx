@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Server, Database, Network, Code, Users, Shield } from "lucide-react";
 import "../css/styles.css";
@@ -10,9 +9,16 @@ const Index = () => {
       <section className="hero-section relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center animate-fade-in">
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 animate-float">
-              TechLinux Solutions
-            </h1>
+            <div className="logo-container">
+              <img 
+                src="/lovable-uploads/ac81b455-3339-41d3-a40c-af378cf505dd.png" 
+                alt="TechLinux Solutions Logo" 
+                className="logo-image animate-float"
+              />
+              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 animate-float">
+                TechLinux Solutions
+              </h1>
+            </div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Soluciones integrales en sistemas Linux, bases de datos, redes y programación para impulsar su negocio hacia el futuro.
             </p>
@@ -87,7 +93,14 @@ const Index = () => {
       {/* Footer */}
       <footer className="footer-gradient text-gray-300 py-12 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h3 className="text-2xl font-bold text-white mb-4">TechLinux Solutions</h3>
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <img 
+              src="/lovable-uploads/ac81b455-3339-41d3-a40c-af378cf505dd.png" 
+              alt="TechLinux Solutions Logo" 
+              className="w-12 h-12"
+            />
+            <h3 className="text-2xl font-bold text-white">TechLinux Solutions</h3>
+          </div>
           <p className="mb-4">Transformando empresas a través de la tecnología</p>
           <div className="flex justify-center space-x-4">
             <Button variant="outline" className="text-white border-white hover:bg-gray-800 transition-colors button-glow">
