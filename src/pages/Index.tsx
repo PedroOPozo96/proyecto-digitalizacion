@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Server, Database, Network, Code, Users, Shield } from "lucide-react";
 import LogoProcessor from "../components/LogoProcessor";
@@ -12,7 +13,7 @@ const Index = () => {
           <div className="text-center animate-fade-in">
             <div className="logo-container">
               <LogoProcessor 
-                imageSrc="/lovable-uploads/ac81b455-3339-41d3-a40c-af378cf505dd.png"
+                imageSrc="/lovable-uploads/f0dfd071-a92c-4ca4-8503-b70c8da3b2cc.png"
                 className="logo-image animate-float"
               />
               <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 animate-float">
@@ -95,7 +96,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center gap-4 mb-4">
             <LogoProcessor 
-              imageSrc="/lovable-uploads/ac81b455-3339-41d3-a40c-af378cf505dd.png"
+              imageSrc="/lovable-uploads/f0dfd071-a92c-4ca4-8503-b70c8da3b2cc.png"
               className="w-20 h-20"
             />
             <h3 className="text-2xl font-bold text-white">TechLinux Solutions</h3>
