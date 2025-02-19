@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Server, Database, Network, Code, Users, Shield } from "lucide-react";
 import "../css/styles.css";
@@ -97,7 +98,7 @@ const Index = () => {
             <img 
               src="/lovable-uploads/ac81b455-3339-41d3-a40c-af378cf505dd.png" 
               alt="TechLinux Solutions Logo" 
-              className="w-12 h-12"
+              className="w-16 h-16" /* Aumentado de w-12 h-12 a w-16 h-16 */
             />
             <h3 className="text-2xl font-bold text-white">TechLinux Solutions</h3>
           </div>
