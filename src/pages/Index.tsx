@@ -98,7 +98,7 @@ const Index = () => {
             <img 
               src="/lovable-uploads/ac81b455-3339-41d3-a40c-af378cf505dd.png" 
               alt="TechLinux Solutions Logo" 
-              className="w-16 h-16" /* Aumentado de w-12 h-12 a w-16 h-16 */
+              className="w-20 h-20" /* Aumentado de w-16 h-16 a w-20 h-20 */
             />
             <h3 className="text-2xl font-bold text-white">TechLinux Solutions</h3>
           </div>
