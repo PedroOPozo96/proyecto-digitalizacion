@@ -1,6 +1,7 @@
 
 import { Server, Database, Network, GraduationCap, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import "../css/styles.css";
 
 const Servicios = () => {
@@ -8,9 +9,16 @@ const Servicios = () => {
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl font-bold text-center text-gray-900 mb-12">
-            Nuestros Servicios
-          </h1>
+          <div className="flex justify-between items-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900">
+              Nuestros Servicios
+            </h1>
+            <Link to="/">
+              <Button className="bg-blue-600 hover:bg-blue-700">
+                Volver al Inicio
+              </Button>
+            </Link>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link to="/servicios/sistemas-linux">
               <ServiceCard
