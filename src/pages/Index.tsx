@@ -7,7 +7,7 @@ import "../css/styles.css";
 const Index = () => {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
+      {/* Hero Section con Botones de Navegación */}
       <section className="hero-section relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center animate-fade-in">
@@ -20,34 +20,21 @@ const Index = () => {
                 TechLinux Solutions
               </h1>
             </div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               Soluciones integrales en sistemas Linux, bases de datos, redes y programación para impulsar su negocio hacia el futuro.
             </p>
-            <div className="mt-8">
-              <Link to="/contacto">
+            <div className="flex justify-center space-x-6">
+              <Link to="/servicios">
                 <Button className="bg-blue-600 hover:bg-blue-700 transform transition-transform hover:scale-105 button-glow">
+                  Nuestros Servicios
+                </Button>
+              </Link>
+              <Link to="/contacto">
+                <Button className="bg-green-600 hover:bg-green-700 transform transition-transform hover:scale-105 button-glow">
                   Contactar
                 </Button>
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50/90 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Sobre Nosotros
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              En TechLinux Solutions nos dedicamos a empoderar a empresas y profesionales 
-              con el conocimiento y las herramientas necesarias para optimizar sus 
-              operaciones tecnológicas y mejorar su competitividad en el mercado. 
-              Nuestro equipo de expertos está comprometido con la excelencia y la 
-              innovación tecnológica.
-            </p>
           </div>
         </div>
       </section>
