@@ -1,5 +1,6 @@
 
-import { Server, Database, Network, Code, Users, Shield } from "lucide-react";
+import { Server, Database, Network, GraduationCap, Shield } from "lucide-react";
+import { Link } from "react-router-dom";
 import "../css/styles.css";
 
 const Servicios = () => {
@@ -11,36 +12,41 @@ const Servicios = () => {
             Nuestros Servicios
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ServiceCard
-              icon={<Server />}
-              title="Sistemas Linux"
-              description="Implementación y administración de sistemas basados en Linux para máxima eficiencia y seguridad."
-            />
-            <ServiceCard
-              icon={<Database />}
-              title="Bases de Datos"
-              description="Gestión y optimización de bases de datos relacionales para un rendimiento óptimo."
-            />
-            <ServiceCard
-              icon={<Network />}
-              title="Redes"
-              description="Diseño e implementación de infraestructuras de red seguras y escalables."
-            />
-            <ServiceCard
-              icon={<Code />}
-              title="Programación"
-              description="Desarrollo de soluciones personalizadas adaptadas a sus necesidades específicas."
-            />
-            <ServiceCard
-              icon={<Users />}
-              title="Capacitación"
-              description="Formación especializada para equipos técnicos y profesionales."
-            />
-            <ServiceCard
-              icon={<Shield />}
-              title="Seguridad"
-              description="Protección integral de sistemas y datos críticos para su empresa."
-            />
+            <Link to="/servicios/sistemas-linux">
+              <ServiceCard
+                icon={<Server />}
+                title="Sistemas Linux"
+                description="Implementación y administración de sistemas basados en Linux para máxima eficiencia y seguridad."
+              />
+            </Link>
+            <Link to="/servicios/bases-de-datos">
+              <ServiceCard
+                icon={<Database />}
+                title="Bases de Datos"
+                description="Gestión y optimización de bases de datos relacionales para un rendimiento óptimo."
+              />
+            </Link>
+            <Link to="/servicios/redes">
+              <ServiceCard
+                icon={<Network />}
+                title="Redes"
+                description="Diseño e implementación de infraestructuras de red seguras y escalables."
+              />
+            </Link>
+            <Link to="/servicios/capacitacion">
+              <ServiceCard
+                icon={<GraduationCap />}
+                title="Capacitación"
+                description="Formación especializada para equipos técnicos y profesionales."
+              />
+            </Link>
+            <Link to="/servicios/seguridad">
+              <ServiceCard
+                icon={<Shield />}
+                title="Seguridad"
+                description="Protección integral de sistemas y datos críticos para su empresa."
+              />
+            </Link>
           </div>
         </div>
       </section>
@@ -54,7 +60,7 @@ const ServiceCard = ({ icon, title, description }: {
   description: string;
 }) => {
   return (
-    <div className="service-card bg-white p-6 rounded-lg shadow-lg">
+    <div className="service-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
       <div className="service-icon text-blue-600 w-12 h-12 mb-4 mx-auto">
         {icon}
       </div>
