@@ -97,7 +97,7 @@ const Index = () => {
           <div className="flex items-center justify-center gap-4 mb-4">
             <LogoProcessor 
               imageSrc="/lovable-uploads/f0dfd071-a92c-4ca4-8503-b70c8da3b2cc.png"
-              className="w-20 h-20"
+              className="w-32 h-32" /* Aumentado de w-20 h-20 a w-32 h-32 */
             />
             <h3 className="text-2xl font-bold text-white">TechLinux Solutions</h3>
           </div>
