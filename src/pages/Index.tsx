@@ -51,7 +51,7 @@ const Index = () => {
              className="text-pink-600 hover:text-pink-800 transition-colors">
             <Instagram className="w-8 h-8" />
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+          <a href="https://x.com/TechlinuxS94520" target="_blank" rel="noopener noreferrer"
              className="text-blue-400 hover:text-blue-600 transition-colors">
             <Twitter className="w-8 h-8" />
           </a>
