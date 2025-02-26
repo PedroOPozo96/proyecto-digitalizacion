@@ -38,32 +38,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="footer-gradient text-gray-300 py-12 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-4 mb-4">
-            <LogoProcessor 
-              imageSrc="/lovable-uploads/f0dfd071-a92c-4ca4-8503-b70c8da3b2cc.png"
-              className="w-32 h-32"
-            />
-            <h3 className="text-2xl font-bold text-white">TechLinux Solutions</h3>
-          </div>
-          <p className="mb-4">Transformando empresas a través de la tecnología</p>
-          <div className="flex justify-center space-x-4">
-            <Link to="/contacto">
-              <Button variant="outline" className="text-white border-white hover:bg-gray-800 transition-colors button-glow">
-                Contacto
-              </Button>
-            </Link>
-            <Link to="/servicios">
-              <Button variant="outline" className="text-white border-white hover:bg-gray-800 transition-colors button-glow">
-                Servicios
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
