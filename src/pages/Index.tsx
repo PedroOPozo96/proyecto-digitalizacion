@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Facebook, Instagram, Twitter } from "lucide-react";
 import LogoProcessor from "../components/LogoProcessor";
 import "../css/styles.css";
 
@@ -38,6 +39,24 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Sección de Redes Sociales */}
+      <div className="fixed bottom-0 left-0 right-0 py-6 bg-white/80 backdrop-blur-sm">
+        <div className="flex justify-center space-x-8">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" 
+             className="text-blue-600 hover:text-blue-800 transition-colors">
+            <Facebook className="w-8 h-8" />
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+             className="text-pink-600 hover:text-pink-800 transition-colors">
+            <Instagram className="w-8 h-8" />
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+             className="text-blue-400 hover:text-blue-600 transition-colors">
+            <Twitter className="w-8 h-8" />
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
