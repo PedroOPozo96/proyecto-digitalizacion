@@ -5,17 +5,17 @@ import { Button } from "@/components/ui/button";
 
 const Seguridad = () => {
   return (
-    <div className="min-h-screen bg-[url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6')] bg-cover bg-center bg-no-repeat py-16 px-4">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-16 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-center mb-8">
           <Shield className="w-12 h-12 text-blue-600 mr-4" />
-          <h1 className="text-4xl font-bold text-white">Seguridad</h1>
+          <h1 className="text-4xl font-bold text-gray-900">Seguridad</h1>
         </div>
-        <div className="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-8">
-          <p className="text-lg text-gray-800 mb-6">
+        <div className="bg-white rounded-lg shadow-lg p-8">
+          <p className="text-lg text-gray-600 mb-6">
             Protección integral de sistemas y datos críticos para su empresa:
           </p>
-          <ul className="list-disc list-inside text-gray-800 mb-8 space-y-2">
+          <ul className="list-disc list-inside text-gray-600 mb-8 space-y-2">
             <li>Auditorías de seguridad</li>
             <li>Implementación de firewalls</li>
             <li>Detección y prevención de intrusiones</li>
