@@ -26,7 +26,7 @@ const BasesDeDatos = () => {
             <li>Implementación de estrategias avanzadas de seguridad de datos</li>
           </ul>
           <Link to="/servicios">
-            <Button className="bg-amber-600 hover:bg-amber-700">
+            <Button className="bg-blue-600 hover:bg-blue-700">
               Volver a Servicios
             </Button>
           </Link>
