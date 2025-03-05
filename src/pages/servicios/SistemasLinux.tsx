@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button";
 
 const SistemasLinux = () => {
   return (
-    <div className="min-h-screen bg-[url('/lovable-uploads/31ed191a-d3c7-4ab3-be94-261f5006e814.png')] bg-cover bg-center bg-no-repeat py-16 px-4">
+    <div className="min-h-screen bg-[url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7')] bg-cover bg-center bg-no-repeat py-16 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-center mb-8">
           <Server className="w-12 h-12 text-blue-600 mr-4" />
-          <h1 className="text-4xl font-bold text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Sistemas Linux</h1>
+          <h1 className="text-4xl font-bold text-green-300 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Sistemas Linux</h1>
         </div>
         <div className="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-8">
           <p className="text-lg text-gray-800 mb-6">
