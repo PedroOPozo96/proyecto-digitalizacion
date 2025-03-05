@@ -9,25 +9,36 @@ const BasesDeDatos = () => {
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-center mb-8">
           <Database className="w-12 h-12 text-blue-600 mr-4" />
-          <h1 className="text-4xl font-bold text-white">Bases de Datos</h1>
+          <h1 className="text-4xl font-bold text-amber-300 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Bases de Datos</h1>
         </div>
-        <div className="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-8">
-          <p className="text-lg text-gray-800 mb-6">
-            Gestionamos y optimizamos sus bases de datos para garantizar un rendimiento óptimo:
-          </p>
-          <ul className="list-disc list-inside text-gray-800 mb-8 space-y-2">
-            <li>Diseño e implementación de bases de datos</li>
-            <li>Optimización de consultas y rendimiento</li>
-            <li>Migración de datos</li>
-            <li>Backup y recuperación</li>
-            <li>Monitoreo y mantenimiento</li>
-            <li>Seguridad de datos</li>
-          </ul>
-          <Link to="/servicios">
-            <Button className="bg-blue-600 hover:bg-blue-700">
-              Volver a Servicios
-            </Button>
-          </Link>
+        
+        <div className="flex flex-col lg:flex-row gap-8 mb-8">
+          <div className="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-8 lg:w-1/2">
+            <p className="text-lg text-gray-800 mb-6">
+              Gestionamos y optimizamos sus bases de datos para garantizar un rendimiento óptimo:
+            </p>
+            <ul className="list-disc list-inside text-gray-800 mb-8 space-y-2">
+              <li>Diseño e implementación de bases de datos</li>
+              <li>Optimización de consultas y rendimiento</li>
+              <li>Migración de datos</li>
+              <li>Backup y recuperación</li>
+              <li>Monitoreo y mantenimiento</li>
+              <li>Seguridad de datos</li>
+            </ul>
+            <Link to="/servicios">
+              <Button className="bg-blue-600 hover:bg-blue-700">
+                Volver a Servicios
+              </Button>
+            </Link>
+          </div>
+          
+          <div className="lg:w-1/2 flex justify-center items-center">
+            <img 
+              src="/lovable-uploads/c67f8c9c-7d48-4c09-bb7c-6831872dc4ed.png" 
+              alt="Bases de datos" 
+              className="rounded-lg shadow-lg max-w-full max-h-[400px] object-contain"
+            />
+          </div>
         </div>
       </div>
     </div>
