@@ -43,7 +43,7 @@ const Index = () => {
       {/* Sección de Redes Sociales */}
       <div className="fixed bottom-0 left-0 right-0 py-6 bg-white/80 backdrop-blur-sm">
         <div className="flex justify-center space-x-8">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" 
+          <a href="https://www.facebook.com/people/TechLinux-So/pfbid02AVBREFqU442DSS3KSueBrmLBNxDVdUXfkw8jrQNRwfEJ9DNNNZgeuFdaGqdXthZ3l/" target="_blank" rel="noopener noreferrer" 
              className="text-blue-600 hover:text-blue-800 transition-colors">
             <Facebook className="w-8 h-8" />
           </a>
