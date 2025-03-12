@@ -2,14 +2,8 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useState, useEffect } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { createClient } from '@supabase/supabase-js';
-
-// Crear cliente de Supabase utilizando las variables de entorno de Supabase
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
+import { useState } from "react";
+import { useToast } from "@/components/ui/use-toast";
 
 const Contacto = () => {
   const [formData, setFormData] = useState({
@@ -17,75 +11,16 @@ const Contacto = () => {
     email: "",
     mensaje: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [supabaseReady, setSupabaseReady] = useState(false);
   const { toast } = useToast();
 
-  useEffect(() => {
-    // Verificar que las credenciales de Supabase están disponibles
-    if (supabaseUrl && supabaseAnonKey) {
-      setSupabaseReady(true);
-    } else {
-      console.error('Error: Las credenciales de Supabase no están configuradas correctamente.');
-    }
-  }, []);
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
-    try {
-      if (!supabaseReady) {
-        throw new Error('La conexión con Supabase no está lista. Por favor, verifica tus credenciales.');
-      }
-
-      // Insertar el mensaje en la tabla contactos de Supabase
-      const { error } = await supabase
-        .from('contactos')
-        .insert([
-          { 
-            nombre: formData.nombre, 
-            email: formData.email, 
-            mensaje: formData.mensaje,
-            fecha: new Date().toISOString()
-          }
-        ]);
-      
-      if (error) {
-        throw error;
-      }
-      
-      // Llamar a la función Edge para enviar el correo
-      const { error: functionError } = await supabase.functions.invoke('enviar-correo-contacto', {
-        body: {
-          nombre: formData.nombre,
-          email: formData.email,
-          mensaje: formData.mensaje,
-          destinatario: 'dig1asir@gmail.com'
-        }
-      });
-      
-      if (functionError) {
-        throw functionError;
-      }
-
-      toast({
-        title: "Mensaje enviado",
-        description: "Nos pondremos en contacto contigo pronto. ¡Gracias!",
-      });
-      
-      // Limpiar el formulario después del envío exitoso
-      setFormData({ nombre: "", email: "", mensaje: "" });
-    } catch (error) {
-      console.error('Error al enviar el mensaje:', error);
-      toast({
-        title: "Error al enviar el mensaje",
-        description: "Por favor, inténtalo de nuevo más tarde.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    // Aquí iría la lógica de envío del formulario
+    toast({
+      title: "Mensaje enviado",
+      description: "Nos pondremos en contacto contigo pronto.",
+    });
+    setFormData({ nombre: "", email: "", mensaje: "" });
   };
 
   return (
@@ -135,18 +70,9 @@ const Contacto = () => {
               className="w-full h-32"
             />
           </div>
-          <Button 
-            type="submit" 
-            className="w-full bg-blue-600 hover:bg-blue-700"
-            disabled={isSubmitting || !supabaseReady}
-          >
-            {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
+          <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
+            Enviar Mensaje
           </Button>
-          {!supabaseReady && (
-            <p className="text-sm text-red-500 text-center mt-2">
-              La conexión con Supabase no está configurada correctamente. Contacta al administrador.
-            </p>
-          )}
         </form>
       </div>
     </div>
