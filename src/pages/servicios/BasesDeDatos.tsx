@@ -14,19 +14,41 @@ const BasesDeDatos = () => {
           </h1>
         </div>
         <div className="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-8">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Gestión Profesional de Bases de Datos</h2>
+          
           <p className="text-lg text-gray-800 mb-6">
-            Gestionamos y optimizamos sus bases de datos para garantizar un rendimiento óptimo y la máxima seguridad:
+            Ofrecemos servicios especializados de diseño, implementación, optimización y administración de bases de datos,
+            garantizando la integridad, disponibilidad y rendimiento óptimo de sus datos empresariales críticos.
           </p>
-          <ul className="list-disc list-inside text-gray-800 mb-8 space-y-2">
-            <li>Diseño e implementación de bases de datos relacionales y NoSQL</li>
-            <li>Optimización de consultas y rendimiento de sistemas</li>
-            <li>Migración segura de datos entre plataformas</li>
-            <li>Soluciones robustas de backup y recuperación</li>
-            <li>Monitoreo continuo y mantenimiento preventivo</li>
-            <li>Implementación de estrategias avanzadas de seguridad de datos</li>
-          </ul>
+          
+          <div className="mb-8">
+            <h3 className="text-xl font-medium text-gray-800 mb-3">Nuestros Servicios de Bases de Datos:</h3>
+            <ul className="list-disc list-inside text-gray-800 space-y-2">
+              <li>Diseño y modelado de bases de datos relacionales (MySQL, PostgreSQL, Oracle, SQL Server)</li>
+              <li>Implementación de soluciones NoSQL (MongoDB, Redis, Cassandra, Elasticsearch)</li>
+              <li>Migración segura entre diferentes sistemas de gestión de bases de datos</li>
+              <li>Optimización de rendimiento y consultas</li>
+              <li>Implementación de alta disponibilidad y replicación</li>
+              <li>Monitoreo continuo y resolución de cuellos de botella</li>
+              <li>Diseño e implementación de estrategias de backup y recuperación</li>
+              <li>Auditoría y mejora de seguridad de datos</li>
+            </ul>
+          </div>
+          
+          <div className="mb-8">
+            <h3 className="text-xl font-medium text-gray-800 mb-3">Beneficios para su Organización:</h3>
+            <ul className="list-disc list-inside text-gray-800 space-y-2">
+              <li>Mejora significativa en el rendimiento de sus aplicaciones</li>
+              <li>Reducción de tiempos de respuesta y procesamiento de datos</li>
+              <li>Mayor consistencia e integridad de la información</li>
+              <li>Sistemas preparados para manejar grandes volúmenes de datos</li>
+              <li>Minimización del riesgo de pérdida de datos</li>
+              <li>Recuperación rápida ante incidentes</li>
+            </ul>
+          </div>
+          
           <Link to="/servicios">
-            <Button className="bg-amber-600 hover:bg-amber-700">
+            <Button className="bg-blue-600 hover:bg-blue-700">
               Volver a Servicios
             </Button>
           </Link>

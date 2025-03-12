@@ -14,17 +14,39 @@ const Capacitacion = () => {
           </h1>
         </div>
         <div className="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-8">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Programas de Formación Tecnológica Especializada</h2>
+          
           <p className="text-lg text-gray-800 mb-6">
-            Ofrecemos capacitación técnica avanzada para equipos técnicos y profesionales:
+            Desarrollamos e impartimos programas de capacitación personalizados en tecnologías de la información,
+            diseñados para potenciar las habilidades técnicas de su equipo y maximizar el aprovechamiento de sus recursos tecnológicos.
           </p>
-          <ul className="list-disc list-inside text-gray-800 mb-8 space-y-2">
-            <li>Cursos avanzados de Linux y administración de sistemas</li>
-            <li>Formación completa en gestión de infraestructuras</li>
-            <li>Talleres prácticos de seguridad informática</li>
-            <li>Certificaciones en redes y comunicaciones</li>
-            <li>Especialización en gestión de bases de datos</li>
-            <li>Workshops de programación y desarrollo de software</li>
-          </ul>
+          
+          <div className="mb-8">
+            <h3 className="text-xl font-medium text-gray-800 mb-3">Áreas de Capacitación:</h3>
+            <ul className="list-disc list-inside text-gray-800 space-y-2">
+              <li>Administración avanzada de sistemas Linux (Ubuntu, CentOS, Red Hat)</li>
+              <li>Gestión de infraestructuras de servidores</li>
+              <li>Virtualización y containerización (VMware, Docker, Kubernetes)</li>
+              <li>Diseño e implementación de redes empresariales</li>
+              <li>Seguridad informática y ethical hacking</li>
+              <li>Administración de bases de datos SQL y NoSQL</li>
+              <li>DevOps y automatización de infraestructuras (Ansible, Terraform)</li>
+              <li>Desarrollo de software y metodologías ágiles</li>
+            </ul>
+          </div>
+          
+          <div className="mb-8">
+            <h3 className="text-xl font-medium text-gray-800 mb-3">Modalidades de Formación:</h3>
+            <ul className="list-disc list-inside text-gray-800 space-y-2">
+              <li>Cursos intensivos presenciales en sus instalaciones</li>
+              <li>Formación online con sesiones en vivo</li>
+              <li>Workshops prácticos con laboratorios reales</li>
+              <li>Certificaciones oficiales en tecnologías específicas</li>
+              <li>Mentorías personalizadas para roles técnicos clave</li>
+              <li>Programas de formación continua para equipos de TI</li>
+            </ul>
+          </div>
+          
           <Link to="/servicios">
             <Button className="bg-yellow-600 hover:bg-yellow-700">
               Volver a Servicios
