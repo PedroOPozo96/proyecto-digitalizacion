@@ -2,13 +2,13 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { createClient } from '@supabase/supabase-js';
 
 // Crear cliente de Supabase utilizando las variables de entorno de Supabase
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 const Contacto = () => {
@@ -18,13 +18,27 @@ const Contacto = () => {
     mensaje: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [supabaseReady, setSupabaseReady] = useState(false);
   const { toast } = useToast();
+
+  useEffect(() => {
+    // Verificar que las credenciales de Supabase están disponibles
+    if (supabaseUrl && supabaseAnonKey) {
+      setSupabaseReady(true);
+    } else {
+      console.error('Error: Las credenciales de Supabase no están configuradas correctamente.');
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
     try {
+      if (!supabaseReady) {
+        throw new Error('La conexión con Supabase no está lista. Por favor, verifica tus credenciales.');
+      }
+
       // Insertar el mensaje en la tabla contactos de Supabase
       const { error } = await supabase
         .from('contactos')
@@ -124,10 +138,15 @@ const Contacto = () => {
           <Button 
             type="submit" 
             className="w-full bg-blue-600 hover:bg-blue-700"
-            disabled={isSubmitting}
+            disabled={isSubmitting || !supabaseReady}
           >
             {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
           </Button>
+          {!supabaseReady && (
+            <p className="text-sm text-red-500 text-center mt-2">
+              La conexión con Supabase no está configurada correctamente. Contacta al administrador.
+            </p>
+          )}
         </form>
       </div>
     </div>
