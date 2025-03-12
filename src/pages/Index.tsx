@@ -7,11 +7,11 @@ import "../css/styles.css";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475')] bg-cover bg-center bg-fixed">
       {/* Hero Section con Botones de Navegación */}
       <section className="hero-section relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center animate-fade-in">
+          <div className="text-center animate-fade-in bg-white/80 backdrop-blur-sm p-8 rounded-lg shadow-lg">
             <div className="logo-container">
               <LogoProcessor 
                 imageSrc="/lovable-uploads/f0dfd071-a92c-4ca4-8503-b70c8da3b2cc.png"
@@ -21,7 +21,7 @@ const Index = () => {
                 TechLinux Solutions
               </h1>
             </div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-800 max-w-3xl mx-auto mb-8">
               Soluciones integrales en sistemas Linux, bases de datos, redes y programación para impulsar su negocio hacia el futuro.
             </p>
             <div className="flex justify-center space-x-6">
