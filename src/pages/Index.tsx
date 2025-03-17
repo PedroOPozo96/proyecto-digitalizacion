@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import LogoProcessor from "../components/LogoProcessor";
-import "../css/styles.css";
+import "../css/index.css"; // Updated import to use the new CSS index file
 import { useState, useRef, useEffect } from "react";
 
 const Index = () => {

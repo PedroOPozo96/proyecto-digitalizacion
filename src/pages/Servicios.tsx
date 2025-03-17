@@ -1,8 +1,7 @@
-
 import { Server, Database, Network, GraduationCap, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import "../css/styles.css";
+import "../css/index.css"; // Updated import to use the new CSS index file
 
 const Servicios = () => {
   return (

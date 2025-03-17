@@ -1,0 +1,7 @@
+
+/* Responsive ajustes para las nuevas secciones */
+@media (max-width: 768px) {
+  .section-grid {
+    grid-template-columns: 1fr;
+  }
+}
