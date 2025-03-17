@@ -4,11 +4,21 @@ import { Link } from "react-router-dom";
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import LogoProcessor from "../components/LogoProcessor";
 import "../css/styles.css";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Index = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const [audioUrl, setAudioUrl] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+  
+  useEffect(() => {
+    // Convertir el enlace de Google Drive a un enlace directo
+    const googleDriveId = "1Cfw3WEISizpRkOduSNOgwDqQIPqhYt4W";
+    const directUrl = `https://docs.google.com/uc?export=download&id=${googleDriveId}`;
+    setAudioUrl(directUrl);
+    setIsLoading(false);
+  }, []);
 
   const toggleAudio = () => {
     if (audioRef.current) {
@@ -116,24 +126,27 @@ const Index = () => {
             </div>
             <div className="flex justify-center">
               <div className="w-full max-w-md bg-gray-100 rounded-lg p-6 flex flex-col items-center">
-                <audio 
-                  ref={audioRef} 
-                  className="w-full mb-4 audio-player"
-                  src="https://placeholder-audio.com/audio-demo.mp3" // Reemplaza con tu URL cuando tengas el audio
-                  controls
-                >
-                  Tu navegador no soporta el elemento de audio.
-                </audio>
-                <Button 
-                  onClick={toggleAudio}
-                  className={`mt-2 ${isPlaying ? 'bg-red-500 hover:bg-red-600' : 'bg-blue-500 hover:bg-blue-600'}`}
-                >
-                  {isPlaying ? 'Pausar Audio' : 'Reproducir Audio'}
-                </Button>
-                <p className="text-sm text-gray-500 mt-4">
-                  Nota: Para agregar tu propio audio, necesitarás alojarlo en un servicio de almacenamiento (como Google Drive, Dropbox, etc.) 
-                  y luego reemplazar la URL en el código.
-                </p>
+                {isLoading ? (
+                  <p className="text-gray-500 mb-4">Cargando audio...</p>
+                ) : (
+                  <>
+                    <audio 
+                      ref={audioRef} 
+                      className="w-full mb-4 audio-player"
+                      src={audioUrl}
+                      controls
+                      onError={(e) => console.error("Error de audio:", e)}
+                    >
+                      Tu navegador no soporta el elemento de audio.
+                    </audio>
+                    <Button 
+                      onClick={toggleAudio}
+                      className={`mt-2 ${isPlaying ? 'bg-red-500 hover:bg-red-600' : 'bg-blue-500 hover:bg-blue-600'}`}
+                    >
+                      {isPlaying ? 'Pausar Audio' : 'Reproducir Audio'}
+                    </Button>
+                  </>
+                )}
               </div>
             </div>
           </div>
