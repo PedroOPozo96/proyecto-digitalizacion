@@ -215,3 +215,40 @@ body {
     height: 180px;
   }
 }
+
+/* Aspectos de Video y Audio */
+.aspect-w-16 {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.aspect-h-9 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Estilos para reproductores de medios */
+.audio-player {
+  width: 100%;
+  background: linear-gradient(to right, #f0f4f8, #eef1f5);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.audio-player:focus, .audio-player:hover {
+  box-shadow: 0 6px 8px rgba(59, 130, 246, 0.15);
+  outline: none;
+}
+
+/* Responsive ajustes para las nuevas secciones */
+@media (max-width: 768px) {
+  .section-grid {
+    grid-template-columns: 1fr;
+  }
+}
