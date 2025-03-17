@@ -4,8 +4,23 @@ import { Link } from "react-router-dom";
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import LogoProcessor from "../components/LogoProcessor";
 import "../css/styles.css";
+import { useState, useRef } from "react";
 
 const Index = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  const toggleAudio = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475')] bg-cover bg-center bg-fixed">
       {/* Hero Section con Botones de Navegación */}
@@ -101,10 +116,24 @@ const Index = () => {
             </div>
             <div className="flex justify-center">
               <div className="w-full max-w-md bg-gray-100 rounded-lg p-6 flex flex-col items-center">
-                <div className="text-gray-500 mb-4">Anuncio de radio próximamente</div>
-                <div className="w-full h-12 bg-gray-200 rounded-full flex items-center justify-center">
-                  <p className="text-gray-600">Audio pendiente de carga</p>
-                </div>
+                <audio 
+                  ref={audioRef} 
+                  className="w-full mb-4 audio-player"
+                  src="https://placeholder-audio.com/audio-demo.mp3" // Reemplaza con tu URL cuando tengas el audio
+                  controls
+                >
+                  Tu navegador no soporta el elemento de audio.
+                </audio>
+                <Button 
+                  onClick={toggleAudio}
+                  className={`mt-2 ${isPlaying ? 'bg-red-500 hover:bg-red-600' : 'bg-blue-500 hover:bg-blue-600'}`}
+                >
+                  {isPlaying ? 'Pausar Audio' : 'Reproducir Audio'}
+                </Button>
+                <p className="text-sm text-gray-500 mt-4">
+                  Nota: Para agregar tu propio audio, necesitarás alojarlo en un servicio de almacenamiento (como Google Drive, Dropbox, etc.) 
+                  y luego reemplazar la URL en el código.
+                </p>
               </div>
             </div>
           </div>
