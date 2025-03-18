@@ -4,23 +4,8 @@ import { Link } from "react-router-dom";
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import LogoProcessor from "../components/LogoProcessor";
 import "../css/styles.css";
-import { useState, useRef } from "react";
 
 const Index = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef<HTMLAudioElement>(null);
-
-  const toggleAudio = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
   return (
     <div className="min-h-screen bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475')] bg-cover bg-center bg-fixed">
       {/* Hero Section con Botones de Navegación */}
@@ -115,25 +100,12 @@ const Index = () => {
               </p>
             </div>
             <div className="flex justify-center">
+              {/* Placeholder para el reproductor de audio (se implementará cuando se tenga el archivo) */}
               <div className="w-full max-w-md bg-gray-100 rounded-lg p-6 flex flex-col items-center">
-                <audio 
-                  ref={audioRef} 
-                  className="w-full mb-4 audio-player"
-                  src="https://placeholder-audio.com/audio-demo.mp3" // Reemplaza con tu URL cuando tengas el audio
-                  controls
-                >
-                  Tu navegador no soporta el elemento de audio.
-                </audio>
-                <Button 
-                  onClick={toggleAudio}
-                  className={`mt-2 ${isPlaying ? 'bg-red-500 hover:bg-red-600' : 'bg-blue-500 hover:bg-blue-600'}`}
-                >
-                  {isPlaying ? 'Pausar Audio' : 'Reproducir Audio'}
-                </Button>
-                <p className="text-sm text-gray-500 mt-4">
-                  Nota: Para agregar tu propio audio, necesitarás alojarlo en un servicio de almacenamiento (como Google Drive, Dropbox, etc.) 
-                  y luego reemplazar la URL en el código.
-                </p>
+                <div className="text-gray-500 mb-4">Anuncio de radio próximamente</div>
+                <div className="w-full h-12 bg-gray-200 rounded-full flex items-center justify-center">
+                  <p className="text-gray-600">Audio pendiente de carga</p>
+                </div>
               </div>
             </div>
           </div>
@@ -148,6 +120,7 @@ const Index = () => {
             <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
           </div>
           <div className="bg-white p-8 rounded-lg shadow-lg">
+            {/* Placeholder para el reproductor de video (se implementará cuando se tenga el archivo) */}
             <div className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg overflow-hidden">
               <div className="flex items-center justify-center h-full">
                 <p className="text-gray-600">Video corporativo próximamente</p>
