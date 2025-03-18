@@ -61,7 +61,6 @@ body {
   );
   position: relative;
   overflow: hidden;
-  z-index: 10; /* Asegura que esta sección esté por encima de otras */
 }
 
 .hero-section::before {
@@ -193,8 +192,6 @@ body {
   justify-content: center;
   gap: 1.5rem;
   margin-bottom: 2rem;
-  position: relative;
-  z-index: 20; /* Asegura que el logo esté por encima de otros elementos */
 }
 
 .logo-image {
@@ -223,7 +220,6 @@ body {
 .aspect-w-16 {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-  width: 100%;
 }
 
 .aspect-h-9 {
@@ -243,39 +239,11 @@ body {
   border-radius: 12px;
   padding: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
 }
 
 .audio-player:focus, .audio-player:hover {
   box-shadow: 0 6px 8px rgba(59, 130, 246, 0.15);
   outline: none;
-  transform: scale(1.01);
-}
-
-/* Estilos adicionales para controles de audio */
-audio::-webkit-media-controls-panel {
-  background-color: #f8fafc;
-}
-
-audio::-webkit-media-controls-play-button {
-  background-color: #3b82f6;
-  border-radius: 50%;
-}
-
-audio::-webkit-media-controls-play-button:hover {
-  background-color: #2563eb;
-}
-
-audio::-webkit-media-controls-timeline {
-  background-color: #e2e8f0;
-  border-radius: 25px;
-  height: 8px;
-}
-
-audio::-webkit-media-controls-current-time-display,
-audio::-webkit-media-controls-time-remaining-display {
-  color: #475569;
-  font-family: 'Inter', sans-serif;
 }
 
 /* Responsive ajustes para las nuevas secciones */
