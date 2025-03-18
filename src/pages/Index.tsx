@@ -100,7 +100,6 @@ const Index = () => {
               </p>
             </div>
             <div className="flex justify-center">
-              {/* Placeholder para el reproductor de audio (se implementará cuando se tenga el archivo) */}
               <div className="w-full max-w-md bg-gray-100 rounded-lg p-6 flex flex-col items-center">
                 <div className="text-gray-500 mb-4">Anuncio de radio próximamente</div>
                 <div className="w-full h-12 bg-gray-200 rounded-full flex items-center justify-center">
@@ -120,7 +119,6 @@ const Index = () => {
             <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
           </div>
           <div className="bg-white p-8 rounded-lg shadow-lg">
-            {/* Placeholder para el reproductor de video (se implementará cuando se tenga el archivo) */}
             <div className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg overflow-hidden">
               <div className="flex items-center justify-center h-full">
                 <p className="text-gray-600">Video corporativo próximamente</p>
