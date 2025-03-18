@@ -3,9 +3,34 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import LogoProcessor from "../components/LogoProcessor";
-import "../css/styles.css";
+import "../css/index.css"; // Updated import to use the new CSS index file
+import { useState, useRef, useEffect } from "react";
 
 const Index = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [audioUrl, setAudioUrl] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+  
+  useEffect(() => {
+    // Convertir el enlace de Google Drive a un enlace directo
+    const googleDriveId = "1Cfw3WEISizpRkOduSNOgwDqQIPqhYt4W";
+    const directUrl = `https://docs.google.com/uc?export=download&id=${googleDriveId}`;
+    setAudioUrl(directUrl);
+    setIsLoading(false);
+  }, []);
+
+  const toggleAudio = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475')] bg-cover bg-center bg-fixed">
       {/* Hero Section con Botones de Navegación */}
@@ -101,10 +126,27 @@ const Index = () => {
             </div>
             <div className="flex justify-center">
               <div className="w-full max-w-md bg-gray-100 rounded-lg p-6 flex flex-col items-center">
-                <div className="text-gray-500 mb-4">Anuncio de radio próximamente</div>
-                <div className="w-full h-12 bg-gray-200 rounded-full flex items-center justify-center">
-                  <p className="text-gray-600">Audio pendiente de carga</p>
-                </div>
+                {isLoading ? (
+                  <p className="text-gray-500 mb-4">Cargando audio...</p>
+                ) : (
+                  <>
+                    <audio 
+                      ref={audioRef} 
+                      className="w-full mb-4 audio-player"
+                      src={audioUrl}
+                      controls
+                      onError={(e) => console.error("Error de audio:", e)}
+                    >
+                      Tu navegador no soporta el elemento de audio.
+                    </audio>
+                    <Button 
+                      onClick={toggleAudio}
+                      className={`mt-2 ${isPlaying ? 'bg-red-500 hover:bg-red-600' : 'bg-blue-500 hover:bg-blue-600'}`}
+                    >
+                      {isPlaying ? 'Pausar Audio' : 'Reproducir Audio'}
+                    </Button>
+                  </>
+                )}
               </div>
             </div>
           </div>
