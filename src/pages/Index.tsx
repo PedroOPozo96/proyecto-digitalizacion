@@ -171,7 +171,7 @@ const Index = () => {
       </section>
 
       {/* Espacio adicional para evitar que la barra fija se superponga al contenido */}
-      <div className="pb-16"></div>
+      <div className="pb-32"></div>
 
       {/* Sección de Redes Sociales */}
       <div className="social-bar">
