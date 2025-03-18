@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import LogoProcessor from "../components/LogoProcessor";
-import "../css/index.css"; // Updated import to use the new CSS index file
+import "../css/styles.css";
 import { useState, useRef, useEffect } from "react";
 
 const Index = () => {
@@ -170,12 +170,9 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Espacio adicional para evitar que la barra fija se superponga al contenido */}
-      <div className="pb-32"></div>
-
       {/* Sección de Redes Sociales */}
-      <div className="social-bar">
-        <div className="social-icons">
+      <div className="fixed bottom-0 left-0 right-0 py-6 bg-white/80 backdrop-blur-sm">
+        <div className="flex justify-center space-x-8">
           <a href="https://www.facebook.com/people/TechLinux-So/pfbid02AVBREFqU442DSS3KSueBrmLBNxDVdUXfkw8jrQNRwfEJ9DNNNZgeuFdaGqdXthZ3l/" target="_blank" rel="noopener noreferrer" 
              className="text-blue-600 hover:text-blue-800 transition-colors">
             <Facebook className="w-8 h-8" />

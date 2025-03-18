@@ -19,9 +19,4 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // Configuración para permitir build flexible para render/netlify
-  build: {
-    outDir: 'dist',
-    sourcemap: true,
-  }
 }));
