@@ -171,11 +171,11 @@ const Index = () => {
       </section>
 
       {/* Espacio adicional para evitar que la barra fija se superponga al contenido */}
-      <div className="pb-20"></div>
+      <div className="pb-24"></div>
 
       {/* Sección de Redes Sociales */}
-      <div className="fixed bottom-0 left-0 right-0 py-4 bg-white/80 backdrop-blur-sm z-50">
-        <div className="flex justify-center space-x-8">
+      <div className="social-bar">
+        <div className="social-icons">
           <a href="https://www.facebook.com/people/TechLinux-So/pfbid02AVBREFqU442DSS3KSueBrmLBNxDVdUXfkw8jrQNRwfEJ9DNNNZgeuFdaGqdXthZ3l/" target="_blank" rel="noopener noreferrer" 
              className="text-blue-600 hover:text-blue-800 transition-colors">
             <Facebook className="w-8 h-8" />
