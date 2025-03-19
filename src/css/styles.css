@@ -223,7 +223,7 @@ body {
 /* Aspectos de Video y Audio */
 .aspect-w-16 {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  padding-bottom: 30%; /* 16:9 Aspect Ratio */
   width: 100%;
 }
 
