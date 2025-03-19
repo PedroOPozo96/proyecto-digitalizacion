@@ -49,8 +49,7 @@ const LogoProcessor = ({ imageSrc, className }: { imageSrc: string; className?: 
     <img
       src={processedImageUrl || imageSrc}
       alt="TechLinux Solutions Logo"
-      className={`${className} object-contain bg-transparent`}
-      style={{ filter: 'drop-shadow(0px 0px 1px rgba(255,255,255,0.5))' }}
+      className={className}
     />
   );
 };

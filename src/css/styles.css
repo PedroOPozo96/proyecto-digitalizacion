@@ -202,8 +202,6 @@ body {
   width: 250px;
   height: 250px;
   transition: transform 0.3s ease;
-  background-color: transparent !important;
-  mix-blend-mode: multiply;
 }
 
 .logo-image:hover {
