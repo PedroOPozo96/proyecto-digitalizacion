@@ -102,7 +102,7 @@ const AcercaDe = () => {
                 <div className="flex items-center justify-center h-full">
                     <a href="https://www.youtube.com/watch?v=3wRNM0z5nxk" target="_blank" rel="noopener noreferrer" 
              className="text-blue-600 hover:text-blue-800 transition-colors">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Nuestro Video Corporativo</h2>
+            
           </a>
                 </div>
               </div>
