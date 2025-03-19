@@ -24,15 +24,10 @@ const Index = () => {
             <p className="text-xl text-gray-800 max-w-3xl mx-auto mb-8">
               Soluciones integrales en sistemas Linux, bases de datos, redes y programación para impulsar su negocio hacia el futuro.
             </p>
-            <div className="flex justify-center space-x-6 flex-wrap gap-4">
+            <div className="flex justify-center space-x-6">
               <Link to="/servicios">
                 <Button className="bg-blue-600 hover:bg-blue-700 transform transition-transform hover:scale-105 button-glow">
                   Nuestros Servicios
-                </Button>
-              </Link>
-              <Link to="/acerca-de">
-                <Button className="bg-purple-600 hover:bg-purple-700 transform transition-transform hover:scale-105 button-glow">
-                  Acerca de Nosotros
                 </Button>
               </Link>
               <Link to="/contacto">
@@ -45,7 +40,6 @@ const Index = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Sección 1: Presentación de la Empresa */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/90">
         <div className="max-w-7xl mx-auto">
@@ -128,14 +122,12 @@ const Index = () => {
             {/* <div className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg overflow-hidden">
               <div className="flex items-center justify-center h-full">
                 <p className="text-gray-600">Video corporativo próximamente</p>
-              </div> */}
+              </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
-=======
->>>>>>> 5c49a184b73097480f89a0a4dd6f64cde797c9de
       {/* Sección de Redes Sociales */}
       <div className="fixed bottom-0 left-0 right-0 py-6 bg-white/80 backdrop-blur-sm">
         <div className="flex justify-center space-x-8">
