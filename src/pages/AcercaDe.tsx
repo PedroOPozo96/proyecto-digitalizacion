@@ -95,16 +95,12 @@ const AcercaDe = () => {
           <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-50 to-gray-100 mb-16 rounded-lg shadow-lg">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4"> <a href="https://www.youtube.com/watch?v=3wRNM0z5nxk" target="_blank" rel="noopener noreferrer" Nuestro Video Corporativo</h2>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/3wRNM0z5nxk?si=DqZL579t76D_Aclt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                #<h2 className="text-3xl font-bold text-gray-900 mb-4"> <a href="https://www.youtube.com/watch?v=3wRNM0z5nxk" target="_blank" rel="noopener noreferrer" Nuestro Video Corporativo</h2>
                 <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
               </div>
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="flex items-center justify-center h-full">
-                    <a href="https://www.youtube.com/watch?v=3wRNM0z5nxk" target="_blank" rel="noopener noreferrer" 
-             className="text-blue-600 hover:text-blue-800 transition-colors">
-            
-          </a>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/3wRNM0z5nxk?si=DqZL579t76D_Aclt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
               </div>
             </div>
