@@ -1,6 +1,5 @@
 
 import React, { useState, useEffect } from 'react';
-import { pipeline, env } from '@huggingface/transformers';
 import { removeBackground, loadImage } from '../utils/imageUtils';
 import { useToast } from '../hooks/use-toast';
 
@@ -34,7 +33,9 @@ const LogoProcessor = ({ imageSrc, className }: { imageSrc: string; className?: 
       }
     };
 
-    processImage();
+    if (imageSrc) {
+      processImage();
+    }
 
     // Cleanup
     return () => {
@@ -42,13 +43,14 @@ const LogoProcessor = ({ imageSrc, className }: { imageSrc: string; className?: 
         URL.revokeObjectURL(processedImageUrl);
       }
     };
-  }, [imageSrc]);
+  }, [imageSrc, toast]);
 
   return (
     <img
       src={processedImageUrl || imageSrc}
       alt="TechLinux Solutions Logo"
-      className={className}
+      className={`${className} object-contain bg-transparent`}
+      style={{ filter: 'drop-shadow(0px 0px 1px rgba(255,255,255,0.5))' }}
     />
   );
 };

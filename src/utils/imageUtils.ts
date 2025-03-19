@@ -50,7 +50,7 @@ export const removeBackground = async (imageElement: HTMLImageElement): Promise<
     console.log(`Image ${wasResized ? 'was' : 'was not'} resized. Final dimensions: ${canvas.width}x${canvas.height}`);
     
     // Get image data as base64
-    const imageData = canvas.toDataURL('image/jpeg', 0.8);
+    const imageData = canvas.toDataURL('image/png', 1);
     console.log('Image converted to base64');
     
     // Process the image with the segmentation model
@@ -71,23 +71,27 @@ export const removeBackground = async (imageElement: HTMLImageElement): Promise<
     
     if (!outputCtx) throw new Error('Could not get output canvas context');
     
-    // Draw original image
-    outputCtx.drawImage(canvas, 0, 0);
-    
     // Apply the mask
     const outputImageData = outputCtx.getImageData(0, 0, outputCanvas.width, outputCanvas.height);
     const data = outputImageData.data;
     
-    // Apply inverted mask to alpha channel
+    // Draw original image
+    outputCtx.drawImage(canvas, 0, 0);
+    
+    // Apply inverted mask to alpha channel - improved algorithm
     for (let i = 0; i < result[0].mask.data.length; i++) {
-      const alpha = Math.round((1 - result[0].mask.data[i]) * 255);
+      // Threshold the mask to make it more binary (either background or foreground)
+      const maskValue = result[0].mask.data[i] > 0.1 ? 1 : 0;
+      const alpha = Math.round((1 - maskValue) * 255);
+      
+      // Apply the alpha value
       data[i * 4 + 3] = alpha;
     }
     
     outputCtx.putImageData(outputImageData, 0, 0);
     console.log('Mask applied successfully');
     
-    // Convert canvas to blob
+    // Convert canvas to blob with transparent background
     return new Promise((resolve, reject) => {
       outputCanvas.toBlob(
         (blob) => {
