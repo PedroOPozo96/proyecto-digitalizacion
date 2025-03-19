@@ -21,91 +21,94 @@ const AcercaDe = () => {
           </div>
 
           {/* Sección 1: Presentación de la Empresa */}
-          <div className="mb-20">
-            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/90 rounded-lg shadow-lg">
-              <div className="max-w-7xl mx-auto">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">Quiénes Somos</h2>
-                  <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+          <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/90 mb-16 rounded-lg shadow-lg">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Quiénes Somos</h2>
+                <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div className="bg-gray-50 p-8 rounded-lg shadow-md">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4">Nuestra Misión</h3>
+                  <p className="text-gray-600 mb-6">
+                    En TechLinux Solutions, nos dedicamos a ofrecer soluciones tecnológicas robustas basadas en sistemas Linux 
+                    y software libre. Nuestro objetivo es proporcionar a empresas de todos los tamaños infraestructuras 
+                    tecnológicas eficientes, seguras y escalables que se adapten a sus necesidades específicas.
+                  </p>
+                  <p className="text-gray-600">
+                    Con más de 10 años de experiencia en el sector, nuestro equipo de especialistas certificados 
+                    garantiza implementaciones exitosas y soporte continuo para mantener sus sistemas funcionando 
+                    de manera óptima.
+                  </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                  <div className="bg-gray-50 p-8 rounded-lg shadow-md">
-                    <h3 className="text-xl font-semibold text-gray-800 mb-4">Nuestra Misión</h3>
-                    <p className="text-gray-600 mb-6">
-                      En TechLinux Solutions, nos dedicamos a ofrecer soluciones tecnológicas robustas basadas en sistemas Linux 
-                      y software libre. Nuestro objetivo es proporcionar a empresas de todos los tamaños infraestructuras 
-                      tecnológicas eficientes, seguras y escalables que se adapten a sus necesidades específicas.
-                    </p>
-                    <p className="text-gray-600">
-                      Con más de 10 años de experiencia en el sector, nuestro equipo de especialistas certificados 
-                      garantiza implementaciones exitosas y soporte continuo para mantener sus sistemas funcionando 
-                      de manera óptima.
-                    </p>
-                  </div>
-                  <div className="bg-gray-50 p-8 rounded-lg shadow-md">
-                    <h3 className="text-xl font-semibold text-gray-800 mb-4">Nuestros Valores</h3>
-                    <ul className="space-y-3 text-gray-600">
-                      <li className="flex items-start">
-                        <span className="text-blue-600 font-bold mr-2">•</span>
-                        <span><strong>Excelencia técnica:</strong> Nos mantenemos actualizados con las últimas tecnologías y mejores prácticas.</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 font-bold mr-2">•</span>
-                        <span><strong>Compromiso:</strong> Nos involucramos completamente en cada proyecto hasta su éxito.</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 font-bold mr-2">•</span>
-                        <span><strong>Transparencia:</strong> Comunicación clara y honesta en todos nuestros servicios.</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-600 font-bold mr-2">•</span>
-                        <span><strong>Innovación:</strong> Buscamos constantemente soluciones creativas para desafíos tecnológicos.</span>
-                      </li>
-                    </ul>
-                  </div>
+                <div className="bg-gray-50 p-8 rounded-lg shadow-md">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-4">Nuestros Valores</h3>
+                  <ul className="space-y-3 text-gray-600">
+                    <li className="flex items-start">
+                      <span className="text-blue-600 font-bold mr-2">•</span>
+                      <span><strong>Excelencia técnica:</strong> Nos mantenemos actualizados con las últimas tecnologías y mejores prácticas.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 font-bold mr-2">•</span>
+                      <span><strong>Compromiso:</strong> Nos involucramos completamente en cada proyecto hasta su éxito.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 font-bold mr-2">•</span>
+                      <span><strong>Transparencia:</strong> Comunicación clara y honesta en todos nuestros servicios.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 font-bold mr-2">•</span>
+                      <span><strong>Innovación:</strong> Buscamos constantemente soluciones creativas para desafíos tecnológicos.</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
-            </section>
-          </div>
+            </div>
+          </section>
 
           {/* Sección 2: Anuncio de Radio */}
-          <div className="mb-20">
-            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg shadow-lg">
-              <div className="max-w-5xl mx-auto">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">Escucha Nuestro Anuncio</h2>
-                  <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+          <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 to-indigo-50 mb-16 rounded-lg shadow-lg">
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Escucha Nuestro Anuncio</h2>
+                <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+              </div>
+              <div className="bg-white p-8 rounded-lg shadow-lg">
+                <div className="text-center mb-6">
+                  <p className="text-lg text-gray-700 italic">
+                    "Descubre cómo TechLinux Solutions puede transformar tu infraestructura tecnológica"
+                  </p>
                 </div>
-                <div className="bg-white p-8 rounded-lg shadow-lg">
-                  <div className="text-center mb-6">
-                    <p className="text-lg text-gray-700 italic">
-                      "Descubre cómo TechLinux Solutions puede transformar tu infraestructura tecnológica"
-                    </p>
-                  </div>
-                  <div className="flex justify-center">
-                    <div className="w-full max-w-md bg-gray-100 rounded-lg p-6 flex flex-col items-center">
-                      <div className="text-gray-500 mb-4">Anuncio de radio próximamente</div>
-                      <div className="w-full h-12 bg-gray-200 rounded-full flex items-center justify-center">
-                        <p className="text-gray-600">Audio pendiente de carga</p>
-                      </div>
+                <div className="flex justify-center">
+                  <div className="w-full max-w-md bg-gray-100 rounded-lg p-6 flex flex-col items-center">
+                    <div className="text-gray-500 mb-4">Anuncio de radio próximamente</div>
+                    <div className="w-full h-12 bg-gray-200 rounded-full flex items-center justify-center">
+                      <p className="text-gray-600">Audio pendiente de carga</p>
                     </div>
                   </div>
                 </div>
               </div>
-            </section>
-          </div>
+            </div>
+          </section>
 
-{/* Sección 3: Anuncio de Video - Eliminada */}
-<div className="mb-20">
-  <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg shadow-lg">
-    <div className="max-w-6xl mx-auto">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Nuestro Video Corporativo</h2>
-        <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
-      </div>
-    </div>
-  </section>
-</div>
+          {/* Sección 3: Anuncio de Video */}
+          <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg shadow-lg">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Nuestro Video Corporativo</h2>
+                <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+              </div>
+              <div className="bg-white p-8 rounded-lg shadow-lg">
+                <div className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg overflow-hidden">
+                  <div className="flex items-center justify-center h-full">
+                    <p className="text-gray-600">Video corporativo próximamente</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
 
       {/* Sección de Redes Sociales */}
       <div className="fixed bottom-0 left-0 right-0 py-6 bg-white/80 backdrop-blur-sm">
