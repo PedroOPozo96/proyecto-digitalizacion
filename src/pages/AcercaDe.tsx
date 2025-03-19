@@ -95,7 +95,7 @@ const AcercaDe = () => {
           <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-50 to-gray-100 mb-16 rounded-lg shadow-lg">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4"> Nuestro video corporativo
    
 </h2>
 
