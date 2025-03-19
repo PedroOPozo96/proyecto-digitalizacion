@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { pipeline, env } from '@huggingface/transformers';
 import { removeBackground, loadImage } from '../utils/imageUtils';
 import { useToast } from '../hooks/use-toast';
 
@@ -33,9 +34,7 @@ const LogoProcessor = ({ imageSrc, className }: { imageSrc: string; className?: 
       }
     };
 
-    if (imageSrc) {
-      processImage();
-    }
+    processImage();
 
     // Cleanup
     return () => {
@@ -43,7 +42,7 @@ const LogoProcessor = ({ imageSrc, className }: { imageSrc: string; className?: 
         URL.revokeObjectURL(processedImageUrl);
       }
     };
-  }, [imageSrc, toast]);
+  }, [imageSrc]);
 
   return (
     <img
