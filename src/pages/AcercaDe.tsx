@@ -99,10 +99,8 @@ const AcercaDe = () => {
                 <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
               </div>
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <div className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg overflow-hidden">
-                  <div className="flex items-center justify-center h-full">
+                <div className="flex items-center justify-center h-full">
                     <p className="text-gray-600">Video corporativo próximamente</p>
-                  </div>
                 </div>
               </div>
             </div>
