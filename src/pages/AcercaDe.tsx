@@ -95,26 +95,17 @@ const AcercaDe = () => {
             </section>
           </div>
 
-          {/* Sección 3: Anuncio de Video */}
-          <div className="mb-20">
-            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg shadow-lg">
-              <div className="max-w-6xl mx-auto">
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">Nuestro Video Corporativo</h2>
-                  <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
-                </div>
-                {/* <div className="bg-white p-8 rounded-lg shadow-lg">
-                  <div className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg overflow-hidden">
-                    <div className="flex items-center justify-center h-full">
-                      <p className="text-gray-600">Video corporativo próximamente</p>
-                    </div>
-                  </div>
-                </div> */}
-              </div>
-            </section>
-          </div>
-        </div>
-      </section>
+{/* Sección 3: Anuncio de Video - Eliminada */}
+<div className="mb-20">
+  <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg shadow-lg">
+    <div className="max-w-6xl mx-auto">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">Nuestro Video Corporativo</h2>
+        <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+      </div>
+    </div>
+  </section>
+</div>
 
       {/* Sección de Redes Sociales */}
       <div className="fixed bottom-0 left-0 right-0 py-6 bg-white/80 backdrop-blur-sm">
