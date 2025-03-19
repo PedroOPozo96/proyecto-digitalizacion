@@ -13,6 +13,7 @@ import BasesDeDatos from "./pages/servicios/BasesDeDatos";
 import Redes from "./pages/servicios/Redes";
 import Capacitacion from "./pages/servicios/Capacitacion";
 import Seguridad from "./pages/servicios/Seguridad";
+import AcercaDe from "./pages/AcercaDe";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/servicios/capacitacion" element={<Capacitacion />} />
           <Route path="/servicios/seguridad" element={<Seguridad />} />
           <Route path="/contacto" element={<Contacto />} />
+          <Route path="/acerca-de" element={<AcercaDe />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
