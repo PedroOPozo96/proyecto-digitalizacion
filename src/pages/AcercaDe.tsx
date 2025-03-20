@@ -80,14 +80,13 @@ const AcercaDe = () => {
                   </p>
                 </div>
                 <div className="flex justify-center">
-                  <iframe 
-                    width="100%" 
-                    height="166" 
-                    scrolling="no" 
-                    frameBorder="no" 
-                    allow="autoplay" 
-                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1686114763&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
-                  </iframe>
+                  <audio 
+                    controls 
+                    className="w-full max-w-md audio-player"
+                  >
+                    <source src="/Anuncio de Radio.mp3" type="audio/mpeg" />
+                    Tu navegador no soporta el elemento de audio.
+                  </audio>
                 </div>
               </div>
             </div>
