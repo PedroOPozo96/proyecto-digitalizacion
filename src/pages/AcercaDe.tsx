@@ -80,12 +80,14 @@ const AcercaDe = () => {
                   </p>
                 </div>
                 <div className="flex justify-center">
-                  <div className="w-full max-w-md bg-gray-100 rounded-lg p-6 flex flex-col items-center">
-                    <div className="text-gray-500 mb-4">Anuncio de radio próximamente</div>
-                    <div className="w-full h-12 bg-gray-200 rounded-full flex items-center justify-center">
-                      <p className="text-gray-600">Audio pendiente de carga</p>
-                    </div>
-                  </div>
+                  <iframe 
+                    width="100%" 
+                    height="166" 
+                    scrolling="no" 
+                    frameBorder="no" 
+                    allow="autoplay" 
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1809414128&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+                  </iframe>
                 </div>
               </div>
             </div>
@@ -101,7 +103,7 @@ const AcercaDe = () => {
               </div>
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="flex items-center justify-center h-full">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/3wRNM0z5nxk?si=DqZL579t76D_Aclt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/3wRNM0z5nxk?si=DqZL579t76D_Aclt" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                 </div>
               </div>
             </div>
