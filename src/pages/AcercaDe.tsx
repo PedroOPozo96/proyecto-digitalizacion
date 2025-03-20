@@ -1,7 +1,9 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Facebook, Instagram, Twitter, Users, Target, Award, Radio, Play, Building } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import "../css/styles.css";
 
 const AcercaDe = () => {
@@ -21,90 +23,136 @@ const AcercaDe = () => {
           </div>
 
           {/* Sección 1: Presentación de la Empresa */}
-          <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/90 mb-16 rounded-lg shadow-lg">
-            <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Quiénes Somos</h2>
-                <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+          <section className="mb-16 overflow-hidden rounded-xl shadow-xl transform transition-all hover:scale-[1.01] duration-300">
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-700 py-6 px-8">
+              <div className="flex items-center space-x-3">
+                <Building className="w-8 h-8 text-white" />
+                <h2 className="text-3xl font-bold text-white">Quiénes Somos</h2>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div className="bg-gray-50 p-8 rounded-lg shadow-md">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">Nuestra Misión</h3>
-                  <p className="text-gray-600 mb-6">
-                    En TechLinux Solutions, nos dedicamos a ofrecer soluciones tecnológicas robustas basadas en sistemas Linux 
-                    y software libre. Nuestro objetivo es proporcionar a empresas de todos los tamaños infraestructuras 
-                    tecnológicas eficientes, seguras y escalables que se adapten a sus necesidades específicas.
-                  </p>
-                  <p className="text-gray-600">
-                    Con más de 10 años de experiencia en el sector, nuestro equipo de especialistas certificados 
-                    garantiza implementaciones exitosas y soporte continuo para mantener sus sistemas funcionando 
-                    de manera óptima.
-                  </p>
-                </div>
-                <div className="bg-gray-50 p-8 rounded-lg shadow-md">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">Nuestros Valores</h3>
-                  <ul className="space-y-3 text-gray-600">
-                    <li className="flex items-start">
-                      <span className="text-blue-600 font-bold mr-2">•</span>
-                      <span><strong>Excelencia técnica:</strong> Nos mantenemos actualizados con las últimas tecnologías y mejores prácticas.</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-blue-600 font-bold mr-2">•</span>
-                      <span><strong>Compromiso:</strong> Nos involucramos completamente en cada proyecto hasta su éxito.</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-blue-600 font-bold mr-2">•</span>
-                      <span><strong>Transparencia:</strong> Comunicación clara y honesta en todos nuestros servicios.</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-blue-600 font-bold mr-2">•</span>
-                      <span><strong>Innovación:</strong> Buscamos constantemente soluciones creativas para desafíos tecnológicos.</span>
-                    </li>
-                  </ul>
-                </div>
+            </div>
+            <div className="bg-white p-8 md:p-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <Card className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                  <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-4">
+                    <div className="flex items-center space-x-2">
+                      <Target className="h-6 w-6 text-white" />
+                      <h3 className="text-xl font-semibold text-white">Nuestra Misión</h3>
+                    </div>
+                  </div>
+                  <CardContent className="p-6 bg-gradient-to-b from-blue-50 to-white">
+                    <p className="text-gray-700 leading-relaxed mb-6">
+                      En TechLinux Solutions, nos dedicamos a ofrecer soluciones tecnológicas robustas basadas en sistemas Linux 
+                      y software libre. Nuestro objetivo es proporcionar a empresas de todos los tamaños infraestructuras 
+                      tecnológicas eficientes, seguras y escalables que se adapten a sus necesidades específicas.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed">
+                      Con más de 10 años de experiencia en el sector, nuestro equipo de especialistas certificados 
+                      garantiza implementaciones exitosas y soporte continuo para mantener sus sistemas funcionando 
+                      de manera óptima.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                  <div className="bg-gradient-to-r from-indigo-500 to-indigo-600 p-4">
+                    <div className="flex items-center space-x-2">
+                      <Award className="h-6 w-6 text-white" />
+                      <h3 className="text-xl font-semibold text-white">Nuestros Valores</h3>
+                    </div>
+                  </div>
+                  <CardContent className="p-6 bg-gradient-to-b from-indigo-50 to-white">
+                    <ul className="space-y-4 text-gray-700">
+                      <li className="flex items-start rounded-lg p-3 hover:bg-gray-50 transition-colors">
+                        <span className="text-blue-600 font-bold mr-2 text-lg">•</span>
+                        <div>
+                          <span className="font-bold text-blue-700">Excelencia técnica:</span>
+                          <p className="mt-1">Nos mantenemos actualizados con las últimas tecnologías y mejores prácticas.</p>
+                        </div>
+                      </li>
+                      <li className="flex items-start rounded-lg p-3 hover:bg-gray-50 transition-colors">
+                        <span className="text-blue-600 font-bold mr-2 text-lg">•</span>
+                        <div>
+                          <span className="font-bold text-blue-700">Compromiso:</span>
+                          <p className="mt-1">Nos involucramos completamente en cada proyecto hasta su éxito.</p>
+                        </div>
+                      </li>
+                      <li className="flex items-start rounded-lg p-3 hover:bg-gray-50 transition-colors">
+                        <span className="text-blue-600 font-bold mr-2 text-lg">•</span>
+                        <div>
+                          <span className="font-bold text-blue-700">Transparencia:</span>
+                          <p className="mt-1">Comunicación clara y honesta en todos nuestros servicios.</p>
+                        </div>
+                      </li>
+                      <li className="flex items-start rounded-lg p-3 hover:bg-gray-50 transition-colors">
+                        <span className="text-blue-600 font-bold mr-2 text-lg">•</span>
+                        <div>
+                          <span className="font-bold text-blue-700">Innovación:</span>
+                          <p className="mt-1">Buscamos constantemente soluciones creativas para desafíos tecnológicos.</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </section>
 
           {/* Sección 2: Anuncio de Radio */}
-          <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 to-indigo-50 mb-16 rounded-lg shadow-lg">
-            <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Escucha Nuestro Anuncio</h2>
-                <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+          <section className="mb-16 overflow-hidden rounded-xl shadow-xl transform transition-all hover:scale-[1.01] duration-300">
+            <div className="bg-gradient-to-r from-purple-600 to-pink-500 py-6 px-8">
+              <div className="flex items-center space-x-3">
+                <Radio className="w-8 h-8 text-white animate-pulse" />
+                <h2 className="text-3xl font-bold text-white">Escucha Nuestro Anuncio</h2>
               </div>
-              <div className="bg-white p-8 rounded-lg shadow-lg">
-                <div className="text-center mb-6">
-                  <p className="text-lg text-gray-700 italic">
-                    "Descubre cómo TechLinux Solutions puede transformar tu infraestructura tecnológica"
-                  </p>
-                </div>
-                <div className="flex justify-center">
-                  <audio 
-                    controls 
-                    className="w-full max-w-md audio-player"
-                  >
-                    <source src="/Anuncio de Radio.mp3" type="audio/mpeg" />
-                    Tu navegador no soporta el elemento de audio.
-                  </audio>
-                </div>
-              </div>
+            </div>
+            <div className="bg-gradient-to-b from-purple-50 to-white p-8 md:p-12">
+              <Card className="border-none shadow-lg overflow-hidden">
+                <CardContent className="p-8">
+                  <div className="text-center mb-8">
+                    <p className="text-xl text-gray-700 italic font-medium bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+                      "Descubre cómo TechLinux Solutions puede transformar tu infraestructura tecnológica"
+                    </p>
+                  </div>
+                  <div className="flex justify-center">
+                    <div className="w-full max-w-md p-4 bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg shadow-md">
+                      <audio 
+                        controls 
+                        className="w-full audio-player"
+                      >
+                        <source src="/Anuncio de Radio.mp3" type="audio/mpeg" />
+                        Tu navegador no soporta el elemento de audio.
+                      </audio>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </section>
 
           {/* Sección 3: Anuncio de Video */}
-          <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-50 to-gray-100 mb-16 rounded-lg shadow-lg">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4"> Nuestro video corporativo </h2>
-
-                <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+          <section className="mb-16 overflow-hidden rounded-xl shadow-xl transform transition-all hover:scale-[1.01] duration-300">
+            <div className="bg-gradient-to-r from-green-600 to-teal-500 py-6 px-8">
+              <div className="flex items-center space-x-3">
+                <Play className="w-8 h-8 text-white" />
+                <h2 className="text-3xl font-bold text-white">Nuestro video corporativo</h2>
               </div>
-              <div className="bg-white p-8 rounded-lg shadow-lg">
-                <div className="flex items-center justify-center h-full">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/3wRNM0z5nxk?si=DqZL579t76D_Aclt" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-                </div>
-              </div>
+            </div>
+            <div className="bg-gradient-to-b from-green-50 to-white p-8 md:p-12">
+              <Card className="border-none shadow-lg overflow-hidden">
+                <CardContent className="p-8">
+                  <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
+                    <iframe 
+                      className="w-full h-[400px]" 
+                      src="https://www.youtube.com/embed/3wRNM0z5nxk?si=DqZL579t76D_Aclt" 
+                      title="YouTube video player" 
+                      frameBorder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                      referrerPolicy="strict-origin-when-cross-origin" 
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </section>
         </div>
@@ -114,15 +162,15 @@ const AcercaDe = () => {
       <div className="fixed bottom-0 left-0 right-0 py-6 bg-white/80 backdrop-blur-sm">
         <div className="flex justify-center space-x-8">
           <a href="https://www.facebook.com/people/TechLinux-So/pfbid02AVBREFqU442DSS3KSueBrmLBNxDVdUXfkw8jrQNRwfEJ9DNNNZgeuFdaGqdXthZ3l/" target="_blank" rel="noopener noreferrer" 
-             className="text-blue-600 hover:text-blue-800 transition-colors">
+             className="text-blue-600 hover:text-blue-800 transition-colors transform hover:scale-110">
             <Facebook className="w-8 h-8" />
           </a>
           <a href="https://www.instagram.com/techlinux_oficial/" target="_blank" rel="noopener noreferrer"
-             className="text-pink-600 hover:text-pink-800 transition-colors">
+             className="text-pink-600 hover:text-pink-800 transition-colors transform hover:scale-110">
             <Instagram className="w-8 h-8" />
           </a>
           <a href="https://x.com/TechlinuxS94520" target="_blank" rel="noopener noreferrer"
-             className="text-blue-400 hover:text-blue-600 transition-colors">
+             className="text-blue-400 hover:text-blue-600 transition-colors transform hover:scale-110">
             <Twitter className="w-8 h-8" />
           </a>
         </div>
